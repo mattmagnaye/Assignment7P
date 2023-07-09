@@ -13,7 +13,7 @@ using namespace std;
     //     negative then it should set it to zero.
     //     Place the prototype for this function above the main function, and the definition
     //     below main().
-void noNegatives(int* x);
+void noNegatives(int *x);
 
     // 21. Write a function named 'swap' that accepts two pointers to integers as arguments, and
     //     then swaps the contents of the two integers. Do not use any reference parameters.  Do
@@ -36,10 +36,10 @@ int main() {
     *p1 = 99;
 
     // 5. Using cout and x (not p1), display the value of x.
-    cout << "# 5: x contains: " << x << endl;
+    cout << "5: x contains: " << x << endl;
 
     // 6. Using cout and the pointer p1 (not x), display the value of x.
-    cout << "# 6: x contains: " << *p1 << endl;
+    cout << "6: x contains: " << *p1 << endl;
 
     // 7. Store the address of y into p1.
     p1 = &y;
@@ -56,6 +56,7 @@ int main() {
     temp = *p1;
     *p1 = *p2;
     *p2 = temp;
+
 
     // 12. Invoke the function twice: once with the address of x as the argument, and once with
     //     the address of y.  Use x or y for the argument (not p1 or p2).
@@ -85,13 +86,12 @@ int main() {
     cout << "#18: The address of the second element is " << p2 + 1 << endl;
 
     // 19. Use p1, p2, and temp to swap the values in the two elements of array 'a'.
-    temp = *(p2);
-    *(p2) = *(p2 + 1);
-    *(p2 + 1) = temp;
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
 
     // 20. Display the values of the two elements.
     cout << "#20: The first element in a[] is " << a[0] << " and the second element in a[] is " << a[1] << endl;
-
 
     // 22. Invoke your swap() function with the addresses of x and y (using the address-of
     //     operator in the arguments), then print their values.  (x should be 99, y should be 0).
